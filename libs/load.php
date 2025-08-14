@@ -5,6 +5,15 @@ function load_template($name){
   include $_SERVER['DOCUMENT_ROOT'] . "/abdulla-0310/app/_templates/$name.php";
 
 }
+   
+ function validate_credentials($username, $password) {
+    // Dummy validation for demonstration purposes
+    if ($username == "abdullah@gmail.com" && $password == "1234") {
+        return true;
+    } else {
+        return false;
+    }
+  }
 
 ?>
 

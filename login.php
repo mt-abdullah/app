@@ -1,5 +1,6 @@
 <?php
 include 'libs/load.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -155,13 +156,17 @@ include 'libs/load.php';
     <header data-bs-theme="dark">
         <?php load_template('_header'); ?>
     </header>
+
     <main>
-        <?php load_template('_login'); ?>
+        <?php load_template('_login'); ?> 
     </main>
+
     <footer class="text-body-secondary py-5">
         <?php load_template('_footer'); ?>
     </footer>
+    
     <script src="./assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
 </body>
 
 </html>
+
