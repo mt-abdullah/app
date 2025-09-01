@@ -1,5 +1,5 @@
 <main class="form-signin w-100 m-auto">
-    <form method="post" action="login.php"> <img class="mb-4"
+    <form method="post" action="test.php"> <img class="mb-4"
             src="https://marstech.lk/wp-content/uploads/2025/03/Mars-Logo.png" alt="" width="300">
         <h1 class="h3 mb-3 fw-normal">signup here</h1>
 

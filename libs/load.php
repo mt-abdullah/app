@@ -3,17 +3,57 @@
 function load_template($name){
   // include __DIR__."/../_templates/$name.php";
   include $_SERVER['DOCUMENT_ROOT'] . "/abdulla-0310/app/_templates/$name.php";
+  
 
 }
    
- function validate_credentials($username, $password) {
-    // Dummy validation for demonstration purposes
-    if ($username == "abdullah@gmail.com" && $password == "1234") {
-        return true;
-    } else {
-        return false;
-    }
-  }
+//  function validate_credentials($username, $password) {
+//     // Dummy validation for demonstration purposes
+//     if ($username == "abdullah@gmail.com" && $password == "1234") {
+//         return true;
+//     } else {
+//         return false;
+//     }
+//   }
+
+
+function singup ($Username, $Password, $email, $phone){
+
+$servername = "localhost";
+$username = "abdulla-0310";
+$password = "200309201173";
+$dbname = "abdulla_newdb";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn===false) {
+  // die("Connection failed: ");
+  echo "Connection failed: ";
+
+}
+else {
+  echo "Connected successfully";
+}
+
+$sql = "INSERT INTO `auth` (`id`, `username`, `password`, `email`, `phone`, `blocked`, `active`) 
+VALUES (NULL, '$Username', '$Password', '$email', '$phone', '0', '0')";
+
+$result = false;
+
+if ($conn->query($sql) === TRUE) {
+  $result = true;
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+  $result = false;
+}
+
+$conn->close();
+
+return $result;
+
+}
+
 
 ?>
 

@@ -7,7 +7,9 @@ include 'libs/load.php';
 <html lang="en" data-bs-theme="auto">
 
 <head>
+
     <?php load_template('_head'); ?>
+
 
 </head>
 
@@ -15,49 +17,6 @@ include 'libs/load.php';
 <body>
 
 
-    <style>
-    html,
-    body {
-        height: 100%;
-    }
-
-    .form-signin {
-        max-width: 330px;
-        padding: 1rem;
-    }
-
-    .form-signin .form-floating:focus-within {
-        z-index: 2;
-    }
-
-     .form-signin input[name="username"] {
-        margin-bottom: -1px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-
-    .form-signin input[name="email"] {
-        margin-bottom: -1px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-    }
-
-      .form-signin input[name="phone"] {
-        margin-bottom: -1px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-    }
-
-    .form-signin input[name="password"] {
-        margin-bottom: 10px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-    }
-    </style>
     <?php load_template('_theme');?>
 
     <header data-bs-theme="dark">
