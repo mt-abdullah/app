@@ -1,25 +1,25 @@
 <?php
-$username= $_POST['email_add'];
-$password= $_POST['u_password'];
+//$username= $_POST['email_add'];
+//$password= $_POST['u_password'];
 
-$result = validate_credentials($username, $password);
+//$result = validate_credentials($username, $password);
 
 
-if ($result) {
+//if ($result) {
     // Redirect to the dashboard or home page
     
-?>
-<main class="container">
+// ?>
+<!-- <main class="container">
     <div class="bg-body-tertiary p-5 rounded mt-3">
         <h1>Login Successful </h1>
         <p class="lead">This example is a quick exercise to login validation .</p> <a
             class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar" role="button">View navbar docs »</a>
     </div>
-</main>
+</main> -->
 
 <?php
 
-} else {
+//} else {
 ?>
 
 
@@ -41,5 +41,5 @@ if ($result) {
 </main>
 <?php
 
-  }
+//}
  ?>
