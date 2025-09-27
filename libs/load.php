@@ -17,7 +17,7 @@ function load_template($name){
 //   }
 
 
-function singup ($Username, $Password, $email, $phone){
+function singup($Username, $Password, $email, $phone) {
 
 $servername = "localhost";
 $username = "abdulla-0310";

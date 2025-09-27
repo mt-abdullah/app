@@ -6,8 +6,8 @@
 
 
 //if ($result) {
-    // Redirect to the dashboard or home page
-    
+// Redirect to the dashboard or home page
+
 // ?>
 <!-- <main class="container">
     <div class="bg-body-tertiary p-5 rounded mt-3">
@@ -23,9 +23,27 @@
 ?>
 
 
+<?php
+include_once "libs/load.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    
+    $query = "SELECT * FROM auth WHERE email = '$email' AND password = '$password'";
+    $result = $conn->query($query);
+    
+    if ($result->num_rows > 0) {
+        echo "Login successful!";
+    } else {
+        echo "Login failed!";
+    }
+}
+?>
+
 
 <main class="form-signin w-100 m-auto">
-    <form method="post" action="login.php"> <img class="mb-4"
+    <form method="post" action="test.php"> <img class="mb-4"
             src="https://marstech.lk/wp-content/uploads/2025/03/Mars-Logo.png" alt="" width="300">
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         <div class="form-floating"> <input name="email_add" type="email" class="form-control" id="floatingInput"
@@ -42,4 +60,4 @@
 <?php
 
 //}
- ?>
+?>
