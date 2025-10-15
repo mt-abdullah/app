@@ -7,7 +7,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
         $password = $_POST['password'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        $error = singup($username, $password, $email, $phone);
+        $error = User::singup($username, $password, $email, $phone);
         $singup = true;
 
 }

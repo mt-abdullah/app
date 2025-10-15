@@ -19,6 +19,22 @@
     // echo __DIR__;
     
     singup("abdtest_1", "1234", "abd@gmail.com", "9876543210");
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+$conn = Database::getConnction();
+
+
+
+
 
 ?>
 </pre>

@@ -1,5 +1,7 @@
 <?php
 
+include_once 'includes/database.class.php';
+include_once 'includes/user.class.php';
 function load_template($name){
   // include __DIR__."/../_templates/$name.php";
   include $_SERVER['DOCUMENT_ROOT'] . "/abdulla-0310/app/_templates/$name.php";
@@ -17,44 +19,47 @@ function load_template($name){
 //   }
 
 
-function singup($Username, $Password, $email, $phone) {
+// function singup($Username, $Password, $email, $phone) {
 
-$servername = "localhost";
-$username = "abdulla-0310";
-$password = "200309201173";
-$dbname = "abdulla_newdb";
+// // $servername = "localhost";
+// // $username = "abdulla-0310";
+// // $password = "200309201173";
+// // $dbname = "abdulla_newdb";
 
-mysqli_report (MYSQLI_REPORT_OFF);
+// // mysqli_report (MYSQLI_REPORT_OFF);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn===false) {
-  // die("Connection failed: ");
-  echo "Connection failed: ";
+// // // Create connection
+// // $conn = new mysqli($servername, $username, $password, $dbname);
+// // // Check connection
+// // if ($conn===false) {
+// //   // die("Connection failed: ");
+// //   echo "Connection failed: ";
 
-}
-else {
-  echo "Connected successfully";
-}
+// // }
+// // else {
+// //   echo "Connected successfully";
+// // }
 
-$sql = "INSERT INTO `auth` (`id`, `username`, `password`, `email`, `phone`, `blocked`, `active`) 
-VALUES (NULL, '$Username', '$Password', '$email', '$phone', '0', '0')";
+//  $conn = Database::getConnction();
 
-$error = false;
 
-if ($conn->query($sql) === TRUE) {
-  $error = false;
-} else {
-  //echo "Error: " . $sql . "<br>" . $conn->error;
-  $error = $conn->error;
-}
+// $sql = "INSERT INTO `auth` (`id`, `username`, `password`, `email`, `phone`, `blocked`, `active`) 
+// VALUES (NULL, '$Username', '$Password', '$email', '$phone', '0', '0')";
 
-$conn->close();
+// $error = false;
 
-return $error;
+// if ($conn->query($sql) === TRUE) {
+//   $error = false;
+// } else {
+//   //echo "Error: " . $sql . "<br>" . $conn->error;
+//   $error = $conn->error;
+// }
 
-}
+// $conn->close();
+
+// return $error;
+
+// }
 
 
 ?>
