@@ -2,6 +2,10 @@
 
 include_once 'includes/database.class.php';
 include_once 'includes/user.class.php';
+include_once 'includes/session.class.php';
+
+
+Session::start();
 function load_template($name){
   // include __DIR__."/../_templates/$name.php";
   include $_SERVER['DOCUMENT_ROOT'] . "/abdulla-0310/app/_templates/$name.php";
