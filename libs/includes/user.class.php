@@ -5,7 +5,7 @@ class User {
     public static function singup($Username, $Password, $email, $phone)
 {
 
-
+     $Password = md5($Password);
 
     $conn = Database::getConnction();
 
@@ -34,6 +34,32 @@ public function __construct($Username){
     $this->conn = Database::getConnction();
     $this->conn->query();
 
+}
+
+
+public static function authenticate ()
+{
+
+}
+
+public static function getBio ()
+{
+    
+}
+
+public static function setBio ()
+{
+    
+}
+
+public static function getAvatar ()
+{
+    
+}
+
+public static function setAvatar ()
+{
+    
 }
 }
 
