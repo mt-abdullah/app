@@ -5,7 +5,7 @@ class User {
     public static function singup($Username, $Password, $email, $phone)
 {
 
-     $Password = md5($Password);
+     $Password = md5(strrev(md5($Password))); // Security Through Obscurity
 
     $conn = Database::getConnction();
 
