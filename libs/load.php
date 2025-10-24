@@ -66,12 +66,13 @@ function load_template($name){
 // }
 
 
-?>
-
-<!-- // git status
+// git status
 // git add .
 // git commit -m "step1"
 
 // git config --global user.email "you@example.com"
 // git config --global user.name "Your Name"
 // git push origin main -->
+
+?>
+

@@ -8,7 +8,9 @@
 // echo password_hash($pass, PASSWORD_BCRYPT);
 
 
-$str = "password12341325465++++++++++++++++++x2jth5fb63f4f4h2f+";
+$str = <<< EOT
+ password12341325465++++++++++++++++++x2jth5fb63f4f4h2f+
+ EOT;
 
 echo("Data Length: " . strlen($str) . "\n");
 
