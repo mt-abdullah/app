@@ -4,8 +4,8 @@
 
 include 'libs/load.php';
 
-$user = "test";
-$pass = "marstech";
+$user = "admin44";
+$pass = "123";
 $result = null;
 
 if(isset($_GET['logout'])){
@@ -15,15 +15,16 @@ if(isset($_GET['logout'])){
 
 if (Session::get('is_loggedin')) {
     $userdata = Session::get('session_user');
-    print ("Welcome Back , $user");
+    //print_r($userdata);
+    print("Welcome Back, " . $userdata['username'] . "<br>");
     $result = $userdata;
 } else {
     print ("No Session Found, trying to login now.<br>");
     $result = User::login($user, $pass);
-    print_r($result);
+    //print_r($result);
 
     if ($result) {
-        echo "Login successful! $user";
+        echo "Login successful! " . $result['username'];
         Session::set('is_loggedin', true);
         Session::set('session_user', $result);
     } else {
